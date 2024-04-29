@@ -45,7 +45,9 @@
 }
 
 /* base */
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 body {
@@ -65,6 +67,9 @@ h5,
 h6,
 p {
   margin-top: 0;
+}
+a {
+  display: inline-block;
 }
 ul {
   margin: 0;
@@ -222,10 +227,28 @@ header {
   border: 2px solid var(--color-brand-light);
   content: '';
 }
+.chefs-list {
+  display: flex;
+  gap: 40px 30px;
+  flex-wrap: wrap;
+}
+.chefs-item {
+  flex-basis: calc((100% - 30px) / 2);
+}
+.chef-card {
+  display: flex;
+  gap: 30px;
+}
 .chef-title {
   margin-bottom: 16px;
   font-size: 40px;
   font-weight: 600;
+}
+.chef-text p {
+  margin-bottom: 24px;
+}
+.chef-text p:last-child {
+  margin-bottom: 0px;
 }
 .chef-photo {
   border-radius: 4px 4px 4px 200px;
@@ -245,6 +268,11 @@ header {
 .format-text {
   font-size: 14px;
   font-weight: 300;
+}
+.formats-container {
+  display: flex;
+  gap: 32px;
+  align-items: center;
 }
 .format-card {
   height: 444px;
@@ -266,18 +294,68 @@ header {
   flex-basis: calc((100% - 40px) / 3);
 }
 
+/* carusel */
+.carusel-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background-color: transparent;
+  fill: var(--color-primary-dark);
+  border-radius: 50%;
+  border: 1px solid var(--color-primary-dark);
+  cursor: pointer;
+}
+
+.carusel-button:hover {
+  background-color: var(--color-primary-dark);
+  fill: var(--color-primary-light);
+}
+
 /* contact section */
+.contacts-section {
+  padding-bottom: 96px;
+}
 .contacts-title {
   margin-bottom: 16px;
+}
+.contacts-container {
+  display: flex;
+  gap: 32px;
+}
+.contact-map {
+  flex-shrink: 0;
+  border: none;
+  border-radius: 16px;
 }
 
 /* footer */
 .footer {
+  padding: 32px;
   background-color: var(--color-primary-dark);
   background-image: url('../images/footer-background.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+.footer-container {
+  display: flex;
+  gap: 20px;
+}
+.footer-nav,
+.footer-address {
+  display: flex;
+  flex-basis: 50%;
+  gap: 20px;
+}
+.footer-logo,
+.footer-menu,
+.address-list,
+.address-info {
+  flex-grow: 1;
 }
 .address-link {
   color: var(--color-primary-light);
@@ -287,6 +365,12 @@ header {
 }
 .address-link:hover {
   color: var(--color-brand-normal);
+}
+.address-icon {
+  fill: var(--color-primary-light);
+}
+.address-icon:hover {
+  fill: var(--color-brand-normal);
 }
 .address-copyright {
   font-weight: 400;
