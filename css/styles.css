@@ -346,6 +346,7 @@ header {
 }
 .contacts-title {
   margin-bottom: 16px;
+  width: 616px;
 }
 .contacts-container {
   display: flex;
@@ -355,6 +356,9 @@ header {
   flex-shrink: 0;
   border: none;
   border-radius: 16px;
+  width: 100%;
+  max-width: 605px;
+  height: 595px;
 }
 
 /* footer */
@@ -447,11 +451,66 @@ footer::after {
   max-width: 880px;
   height: 100%;
   max-height: 880px;
+  padding: 128px;
   background-color: var(--color-primary-light);
   border-radius: 32px;
+  overflow-y: auto;
 }
 .modal-btn-close {
   position: absolute;
   top: 40px;
   right: 40px;
+}
+
+/* form */
+.form-field {
+  margin-bottom: 32px;
+}
+
+.form-label {
+  display: block;
+}
+
+.form-input {
+  padding: 16px 42px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.17;
+  border: 1px solid var(--color-secondary-dark);
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+.form-input:focus {
+  border-color: var(--color-brand-normal);
+  outline: none;
+}
+
+.form-input::placeholder {
+  color: var(--color-secondary-dark);
+  font-size: 16px;
+  line-height: 1.17;
+}
+
+.form-input:focus::placeholder {
+  color: var(--color-primary-dark);
+}
+
+.form-button {
+  display: block;
+  margin: 0 auto 24px;
+}
+
+.form-terms {
+  max-width: 220px;
+  margin: 0 auto;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.form-terms-link {
+  color: var(--color-primary-dark);
+  text-underline-offset: 2px;
 }
