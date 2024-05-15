@@ -112,6 +112,13 @@ address {
   background-color: transparent;
 }
 
+.button:disabled {
+  color: gray;
+  background-color: lightgray;
+  border-color: currentColor;
+  cursor: not-allowed;
+}
+
 /* link */
 .link {
   color: var(--color-primary-light);
