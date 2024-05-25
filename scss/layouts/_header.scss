@@ -3,7 +3,12 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding-top: 32px;
+  padding-top: 16px;
+
+  @media screen and (min-width: $bp-desktop) {
+    padding-top: 32px;
+  }
+
   &__container {
     display: flex;
     align-items: center;
@@ -12,15 +17,40 @@
 
   &__nav {
     display: flex;
-    flex-grow: 1;
     align-items: center;
+    flex-grow: 1;
     gap: 40px;
   }
 
   &__menu {
-    display: flex;
-    gap: 64px;
-    flex-grow: 1;
-    justify-content: center;
+    display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: flex;
+      gap: 64px;
+      flex-grow: 1;
+      justify-content: center;
+    }
+  }
+
+  &__button {
+    display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: block;
+    }
+  }
+
+  &__burger {
+    width: 24px;
+    height: 24px;
+    border: none;
+    padding: 0;
+    fill: var(--color-primary-light);
+    background-color: transparent;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: none;
+    }
   }
 }
