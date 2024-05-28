@@ -13,8 +13,30 @@
     }
 
     &__btn-close {
+        width: 14px;
+        height: 14px;
         position: absolute;
         top: 16px;
         right: 24px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 2px;
+            background-color: var(--color-primary-dark);
+        }
+
+        &::before {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        &::after {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
     }
 }
