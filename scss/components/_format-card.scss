@@ -23,9 +23,13 @@
 
   &__title {
     margin-bottom: 16px;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
     color: var(--color-primary-light);
+
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 24px;
+    }
   }
 
   &__text {
